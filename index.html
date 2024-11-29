@@ -4,24 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="content-container">
+    <div class="wrapper">
         <header>
-            <h1>To Do List</h1>
+            <h1 class="title">To Do List</h1>
         </header>
         <main>
-            <input id="inputField" type="text" placeholder="Add To Do" class="input">
-            <button id="addButton" class="btn btn-add">Add</button>
-    
-            <div class="todo-container" id="toDoContainer">
-
-            </div>
+            <form class="input-form">
+                <input id="inputField" type="text" placeholder="Add task" class="input">
+                <button id="addButton" class="add-btn">Add</button>
+            </form>
+            <p class="error" id="error-msg">You must write something!</p>
+            
+            <ul id="listContainer" class="list-container">
+                <li class="todo-task">
+                    <input type="checkbox" id="task-1">
+                    <label for="task-1" class="checkbox">
+                        <i class="fa-solid fa-check"></i>
+                    </label>
+                    <label for="task-1" class="task-value">Task 1</label>
+                    <button class="delete-btn">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </li>
+                <li class="todo-task">
+                    <input type="checkbox" id="task-2">
+                    <label for="task-2" class="checkbox">
+                        <i class="fa-solid fa-check"></i>
+                    </label>
+                    <label for="task-2" class="task-value">Task 2</label>
+                    <button class="delete-btn">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </li>
+            </ul>
 
         </main>
 
     </div>
+    <script src="https://kit.fontawesome.com/0a70cb21f3.js" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
 </body>
 </html>
