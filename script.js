@@ -1,26 +1,28 @@
-/* 
-const inputField = document.getElementById('inputField');
-const listContainer = document.getElementById('listContainer');
-const addButton = document.getElementById('addButton');
-
-
-
-addButton.addEventListener('click', function() {
-    if(inputField.value == ""){
-        document.getElementById('error-msg').style.display = "block"
-        return
-    }
-    document.getElementById('error-msg').style.display = "none";
-    let toDo = document.createElement('li');
-    toDo.classList.add('todo-task');
-    toDo.innerText = inputField.value;
-    listContainer.appendChild(toDo);
-    inputField.value = "";
-}); */
-
 const todoForm = document.querySelector('form');
 const inputField = document.getElementById('inputField');
-const addButton = document.getElementById('addButton')
-const todoList = document.getElementById('listContainer');
+const listContainer = document.getElementById('listContainer');
+const errorMessage = document.getElementById('error-msg');
 
-console.log(todoList)
+todoForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    addTask();
+});
+//Adding task to the list
+function addTask () {
+    const todoText = inputField.value.trim();
+    //Dispays error message if inputfield is emtpy and no elements are added to the list
+    if(inputField.value == ""){
+        errorMessage.style.display = "block"
+        return
+    }
+    createTask(todoText);
+    inputField.value = "";
+    errorMessage.style.display = "none";
+}
+
+function createTask(task){
+    const taskLI = document.createElement("li");
+    todoLI.innerText = task;
+    return todoLI;
+}
+
