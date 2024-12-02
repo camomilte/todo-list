@@ -3,8 +3,6 @@ const inputField = document.getElementById('inputField');
 const listContainer = document.getElementById('listContainer');
 const errorMessage = document.getElementById('error-msg');
 
-//Fetch API
-
 let allTasks = [];
 
 //Insert your API key between the quotationmarks
