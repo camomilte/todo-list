@@ -31,24 +31,6 @@ window.onload = () => {
 
 };
 
-//Fetch data from API
-/* fetch(URL, {
-    method: 'POST',
-    headers: {
-        'Content-type': 'application/json'
-    },
-    body: JSON.stringify({
-        "title": "Laga mat",
-        "completed": false,
-    }),
-})
-    .then ((res) => res.json())
-    .then((json) => console.log(json))
-    
-    .catch(err => {
-        console.log(err);
-    }) */
-
 
 todoForm.addEventListener('submit', async function(e) {
     e.preventDefault();
